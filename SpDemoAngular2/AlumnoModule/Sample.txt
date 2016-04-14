@@ -1,0 +1,5 @@
+﻿Archivo de marcadores de posición para el módulo de SharePoint.
+
+Un módulo contiene archivos que se incluyen en una aplicación de SharePoint cuando se implementa.
+
+Para obtener más información, busque en la Ayuda del módulo.

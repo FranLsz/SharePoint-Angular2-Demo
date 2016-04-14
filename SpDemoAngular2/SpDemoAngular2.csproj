@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{443C9136-E839-4E23-A774-F613904D9B2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpDemoAngular2</RootNamespace>
+    <AssemblyName>SpDemoAngular2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{1e378365-57a6-4404-9302-a94096cf8381}</AppFeaturePartId>
+    <WspPartId>{3747155f-1b82-4a39-8150-fb668d0652d8}</WspPartId>
+    <WorkflowPartId>{f4b18f21-2298-4868-9c1f-fb48df71f318}</WorkflowPartId>
+    <CspkgPartId>{1d9102d1-8bb2-4c13-943c-05970ddee4ac}</CspkgPartId>
+    <SqlPackagePartId>{87535bfc-288d-4442-ad66-9c61b3bc4959}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="AlumnoModule\Alumno\AlumnoInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{da0c7b17-f780-49e0-bedf-0ccf3e50ca83}</SharePointProjectItemId>
+    </None>
+    <None Include="AlumnoModule\Alumno\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b321b0ea-2d1d-4047-a237-8fa8da802c64}</SharePointProjectItemId>
+    </None>
+    <None Include="AlumnoModule\Apellidos\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8d73d2bf-1e11-4bd7-82da-092d3d8cb9ea}</SharePointProjectItemId>
+    </None>
+    <None Include="AlumnoModule\Nombre\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{08ceabe2-6712-4c30-aa95-1b4295a23948}</SharePointProjectItemId>
+    </None>
+    <None Include="AlumnoModule\Nota\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b901994f-9f52-4eb5-a9c2-daf926470e49}</SharePointProjectItemId>
+    </None>
+    <None Include="AlumnoModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6e449250-5159-4826-b5dd-8c6c87f09863}</SharePointProjectItemId>
+    </None>
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5bd40cac-ee32-4231-914d-d0d6ed52d6df}</SharePointProjectItemId>
+    </None>
+    <Content Include="AlumnoModule\Alumno\AlumnoInstance\Elements.xml" />
+    <Content Include="AlumnoModule\Alumno\Elements.xml" />
+    <Content Include="AlumnoModule\Alumno\Schema.xml" />
+    <Content Include="AlumnoModule\Apellidos\Elements.xml" />
+    <Content Include="AlumnoModule\Elements.xml" />
+    <Content Include="AlumnoModule\Nombre\Elements.xml" />
+    <Content Include="AlumnoModule\Nota\Elements.xml" />
+    <Content Include="AlumnoModule\Sample.txt" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{87535bfc-288d-4442-ad66-9c61b3bc4959}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\app\app.config.js" />
+    <Content Include="Scripts\app\templates\app.template.html" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4ae7abe8-5b79-43d2-a680-62a3aeedf559}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{120f23b8-ecd0-415f-b6c2-13a2909cfa78}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{10b29760-9fd3-4179-aafe-91b79d04d59e}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{b31d1528-fdb2-4861-a8d1-a89c2373c7c8}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\components\app.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\main.ts" />
+    <TypeScriptCompile Include="Scripts\app\models\alumno.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\alumno.service.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
