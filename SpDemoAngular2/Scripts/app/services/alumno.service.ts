@@ -1,6 +1,6 @@
-﻿import {Alumno}                     from '../models/alumno';
-import {Http, Headers}              from 'angular2/http';
-import {Injectable}                 from 'angular2/core';
+﻿import {Alumno}                     from '../models/alumno'
+import {Http, Headers, Response}    from 'angular2/http'
+import {Injectable}                 from 'angular2/core'
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class AlumnoService {
         this.spApiUrl = _spPageContextInfo.webServerRelativeUrl + "/_api/web/lists/getByTitle('" + this.spListName + "')";
     }
 
-    // SET HEADERS
+    // GET HEADERS
     private getHeaders(verb?: string) {
         var headers = new Headers();
         var digest = document.getElementById('__REQUESTDIGEST').value;

@@ -66,8 +66,10 @@ export class AppComponent {
 
     // Borrar alumno
     public borrarAlumno(alumno: Alumno) {
-        if (this.accionForm == "Editar" && this.alumno.id == alumno.id)
+        if (this.accionForm == "Editar" && this.alumno.id == alumno.id) {
             this.alumno = new Alumno();
+            this.accionForm = "Nuevo";
+        }
 
         this._alumnoService.deleteData(alumno).subscribe(
             data => {
