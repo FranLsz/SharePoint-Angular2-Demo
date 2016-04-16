@@ -8,12 +8,11 @@
     constructor();
     constructor(nombre: string, apellidos: string, nota: number, id?: number) {
 
-        if (id != undefined)
-            this.id = id;
-
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.nota = nota;
+
     }
 
     public static fromJson(json: any) {

@@ -26,7 +26,7 @@ export class AppComponent {
 
     // Get alumnos
     public getAlumnos() {
-        this._alumnoService.getAlumnos().subscribe(
+        this._alumnoService.getData().subscribe(
             data => {
                 this.listaAlumnos = Alumno.fromJsonList(data.d.results);
             },
@@ -38,7 +38,7 @@ export class AppComponent {
     public guardarAlumno() {
 
         if (this.accionForm == "Nuevo") {
-            this._alumnoService.addAlumno(this.alumno).subscribe(
+            this._alumnoService.addData(this.alumno).subscribe(
                 data => {
                     this.listaAlumnos.push(Alumno.fromJson(data.d));
                     this.alumno = new Alumno();
@@ -47,7 +47,7 @@ export class AppComponent {
             );
         }
         else if (this.accionForm == "Editar") {
-            this._alumnoService.putAlumno(this.alumno).subscribe(
+            this._alumnoService.putData(this.alumno).subscribe(
                 data => {
                     this.accionForm = "Nuevo";
                     this.alumno = new Alumno();
@@ -69,7 +69,7 @@ export class AppComponent {
         if (this.accionForm == "Editar" && this.alumno.id == alumno.id)
             this.alumno = new Alumno();
 
-        this._alumnoService.deleteAlumno(alumno).subscribe(
+        this._alumnoService.deleteData(alumno).subscribe(
             data => {
                 var i = this.listaAlumnos.map(function (e) { return e.id; }).indexOf(alumno.id);
                 this.listaAlumnos.splice(i, 1);
